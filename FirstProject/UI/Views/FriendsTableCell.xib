@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsController" customModule="FirstProject" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="FriendsTCell" id="Vdz-kJ-J9U" customClass="FriendsTCell" customModule="FirstProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vdz-kJ-J9U" id="jda-Ua-qSf">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-Bh-GbV">
+                        <rect key="frame" x="8" y="12.5" width="359" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-v9-rRi" customClass="ProfileImgView" customModule="FirstProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BJa-Vu-ecZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="dDa-mu-TcX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zw1-h4-8Fe">
+                                <rect key="frame" x="60" y="1" width="279" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqJ-Ng-kwO">
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="I1e-6n-jUJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Son Mesaj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1w-n5-Zye">
+                                        <rect key="frame" x="0.0" y="28" width="279" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Bhp-mR-afW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-4h-pCo" customClass="OnlineView" customModule="FirstProject" customModuleProvider="target">
+                                <rect key="frame" x="349" y="20" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="4lW-Bc-lEn"/>
+                                    <constraint firstAttribute="height" constant="10" id="tPb-zA-Pph"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Scd-Bh-GbV" firstAttribute="leading" secondItem="jda-Ua-qSf" secondAttribute="leading" constant="8" id="5y8-rd-9zl"/>
+                    <constraint firstItem="Scd-Bh-GbV" firstAttribute="centerX" secondItem="jda-Ua-qSf" secondAttribute="centerX" id="Nfl-H9-ziz"/>
+                    <constraint firstItem="Scd-Bh-GbV" firstAttribute="centerY" secondItem="jda-Ua-qSf" secondAttribute="centerY" id="h0S-md-gH7"/>
+                    <constraint firstAttribute="trailing" secondItem="Scd-Bh-GbV" secondAttribute="trailing" constant="8" id="wjX-Gr-kjK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="isOnlineView" destination="Itk-4h-pCo" id="UbA-67-Xbd"/>
+                <outlet property="lastMessageLbl" destination="w1w-n5-Zye" id="kcH-0k-KXs"/>
+                <outlet property="profileImgView" destination="HCh-v9-rRi" id="187-sY-ErZ"/>
+                <outlet property="stackView" destination="Scd-Bh-GbV" id="Igx-Or-eDg"/>
+                <outlet property="usernameLbl" destination="zqJ-Ng-kwO" id="3Kv-92-m8w"/>
+            </connections>
+            <point key="canvasLocation" x="257" y="516"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Profile" width="72" height="72"/>
+    </resources>
+</document>
